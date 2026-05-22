@@ -226,7 +226,7 @@ select {
 
 .hero-stat {
   align-self: start;
-  padding-top: 92px;
+  padding-top: 160px; /* Increased from 92px to shift it lower */
   position: relative;
   z-index: 2;
 }
