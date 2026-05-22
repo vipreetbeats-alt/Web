@@ -225,7 +225,7 @@ select {
   background: rgba(0, 0, 0, 0.1);
 }
 
-.social-rail a { display: grid; place-items: center; width: 34px; height: 34px; color: #ffffff; }
+.social-rail a { display: grid; place-items: center; width: 34px; height: 34px; color: #111111; } /* FIXED err1: Dark icons for light hero */
 
 .pixel-word {
   position: absolute;
@@ -247,6 +247,8 @@ select {
   color: var(--dark-ink);
   background: 
     linear-gradient(90deg, var(--dark-line) 1px, transparent 1px) 0 0 / 18px 100%,
+    linear-gradient(0deg, var(--dark-line) 1px, transparent 1px) 0 0 / 100% 18px,
+    radial-gradient(circle at 80% 20%, rgba(255, 121, 0, 0.15), transparent 40%),
     var(--dark-bg);
 }
 
@@ -278,9 +280,9 @@ select {
   overflow: hidden;
 }
 
-.photo-grid article { padding: 24px; border-right: 1px solid var(--dark-line); }
+.photo-grid article { padding: 34px; border-right: 1px solid var(--dark-line); }
 .photo-grid article:last-child { border-right: 0; }
-.photo-grid img { width: 100%; height: 350px; object-fit: cover; border-radius: 4px; margin-bottom: 24px; }
+.photo-grid img { width: 100%; height: 400px; object-fit: cover; border-radius: 4px; margin-bottom: 24px; }
 
 .service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 34px; }
 .service-grid article { padding: 34px; border-radius: var(--radius); background: #1e1e1e; box-shadow: inset 0 0 0 1px var(--dark-line); }
@@ -305,23 +307,28 @@ select {
 .service-production > * { position: relative; z-index: 2; }
 
 /* SHOWCASE */
-.audio-showcase { display: grid; gap: 14px; margin-top: 34px; }
+.audio-showcase { display: grid; gap: 24px; margin-top: 34px; }
 .comparison-card {
   display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 14px;
+  grid-template-columns: 280px 1fr; /* FIXED err2: Wider meta area */
+  gap: 24px;
 }
 
 .comparison-meta {
-  padding: 22px;
+  padding: 28px;
   border-radius: var(--radius);
   background: #1e1e1e;
   box-shadow: inset 0 0 0 1px var(--dark-line);
 }
 
-.audio-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.audio-pair { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 24px; 
+}
+
 .audio-panel {
-  padding: 22px;
+  padding: 28px;
   border-radius: var(--radius);
   background: #1e1e1e;
   box-shadow: inset 0 0 0 1px var(--dark-line);
