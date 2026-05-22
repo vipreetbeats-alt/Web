@@ -29,6 +29,7 @@
         <a class="login-button" href="#contact">Book a Mix</a>
       </header>
 
+      <!-- HERO AREA (Light Theme) -->
       <section class="hero" id="home" aria-labelledby="hero-title">
         <p class="slide-count">[ 1 / 4 ]</p>
         <div class="hero-copy">
@@ -65,9 +66,9 @@
 
         <div class="pixel-word pixel-left" aria-hidden="true">VIP</div>
         <div class="pixel-word pixel-right" aria-hidden="true">REET</div>
-        <div class="scroll-cue">Scroll to explore more</div>
       </section>
 
+      <!-- ALL OTHER SECTIONS (Dark Production Theme) -->
       <section class="photo-band" id="about" aria-labelledby="about-title">
         <div class="section-kicker">Studio / Producer</div>
         <div class="photo-grid">
@@ -75,10 +76,7 @@
             <img src="producer-photo.png" alt="Producer" />
             <div>
               <h2 id="about-title">Your sound, engineered with taste.</h2>
-              <p>
-                Use these image slots for your real studio photos and personal
-                shots.
-              </p>
+              <p></p>
             </div>
           </article>
           <article>
@@ -101,141 +99,115 @@
           <article>
             <i data-lucide="sliders-horizontal"></i>
             <h3>Vocal Mixing</h3>
-            <p>Pitch cleanup, EQ, compression, ambience, effects, and presence.</p>
+            <p>Pitch cleanup, EQ, compression, and presence.</p>
           </article>
           <article>
             <i data-lucide="waves"></i>
             <h3>Full Song Mix</h3>
-            <p>Balance, clarity, movement, punch, and a wide professional image.</p>
+            <p>Balance, clarity, movement, and punch.</p>
           </article>
           <article>
             <i data-lucide="disc-3"></i>
             <h3>Mastering</h3>
-            <p>Streaming-ready loudness, tonal control, sequencing, and final QC.</p>
-          </article>
-          <article class="service-production">
-            <i data-lucide="drum"></i>
-            <h3>Music Production</h3>
-            <p>Custom beats, melody ideas, and artist-focused sound design.</p>
-            <div class="service-previews">
-              <button class="audio-button" data-audio="Aah 140 Em 1.mp3">
-                <i data-lucide="play"></i>
-                <span>Play Beat 1</span>
-              </button>
-              <button class="audio-button" data-audio="Kabool Hai.wav">
-                <i data-lucide="play"></i>
-                <span>Play Beat 2</span>
-              </button>
-            </div>
+            <p>Streaming-ready loudness and final QC.</p>
           </article>
         </div>
       </section>
 
       <section class="showcase-band" id="showcase" aria-labelledby="showcase-title">
-        <div class="section-kicker">Client Audio Showcase</div>
+        <div class="section-kicker">Showcase</div>
         <div class="section-heading">
-          <h2 id="showcase-title">Raw on the left. Professional on the right.</h2>
-          <p>Real comparisons of my work across different genres and stages.</p>
+          <h2 id="showcase-title">Interactive Audio Experience.</h2>
+          <p>The visualizer reacts live to every track in the showcase below.</p>
         </div>
 
-        <div class="audio-showcase">
+        <div class="showcase-grid">
+          <!-- Live Visualizer -->
+          <div class="visualizer-card">
+            <canvas id="production-visualizer"></canvas>
+          </div>
+
+          <!-- Music Production (Moved here) -->
           <article class="comparison-card">
-            <div class="comparison-meta">
-              <span>Mix 01</span>
-              <h3>Pop vocal cleanup</h3>
-            </div>
-            <div class="audio-pair">
-              <div class="audio-panel before">
-                <span class="audio-label">Raw Vocal</span>
-                <h4>Client take</h4>
-                <button class="audio-button" data-audio="Client pop take.wav">
-                  <i data-lucide="play"></i>
-                  <span>Play raw</span>
-                </button>
-              </div>
-              <div class="audio-panel after">
-                <span class="audio-label">Professional Mix</span>
-                <h4>Processed vocal</h4>
-                <button class="audio-button" data-audio="Client pop final.wav">
-                  <i data-lucide="play"></i>
-                  <span>Play mix</span>
-                </button>
-              </div>
+            <div class="audio-panel">
+              <span class="audio-label">Production</span>
+              <h3>Beat Demo 01</h3>
+              <button class="audio-button" data-audio="Aah%20140%20Em%201.mp3">
+                <i data-lucide="play"></i>
+                <span>Play Beat 1</span>
+              </button>
             </div>
           </article>
 
           <article class="comparison-card">
-            <div class="comparison-meta">
-              <span>Mix 02</span>
-              <h3>Rap hook energy</h3>
+            <div class="audio-panel">
+              <span class="audio-label">Production</span>
+              <h3>Beat Demo 02</h3>
+              <button class="audio-button" data-audio="Kabool%20Hai.wav">
+                <i data-lucide="play"></i>
+                <span>Play Beat 2</span>
+              </button>
             </div>
-            <div class="audio-pair">
-              <div class="audio-panel before">
-                <span class="audio-label">Raw Vocal</span>
-                <h4>Dry recording</h4>
-                <button class="audio-button" data-audio="raw-vocal-2.wav">
-                  <i data-lucide="play"></i>
-                  <span>Play raw</span>
-                </button>
-              </div>
-              <div class="audio-panel after">
-                <span class="audio-label">Professional Mix</span>
-                <h4>Radio-ready hook</h4>
-                <button class="audio-button" data-audio="pro-mix-2.wav">
-                  <i data-lucide="play"></i>
-                  <span>Play mix</span>
-                </button>
-              </div>
+          </article>
+
+          <!-- Mixing Showcase -->
+          <article class="comparison-card">
+            <div class="audio-panel">
+              <span class="audio-label">Mixing</span>
+              <h3>Pop Vocal Cleanup</h3>
+              <button class="audio-button" data-audio="Client%20pop%20take.wav">
+                <i data-lucide="play"></i>
+                <span>Raw Take</span>
+              </button>
+              <button class="audio-button" data-audio="Client%20pop%20final.wav">
+                <i data-lucide="play"></i>
+                <span>Final Mix</span>
+              </button>
             </div>
           </article>
 
           <article class="comparison-card">
-            <div class="comparison-meta">
-              <span>Mix + Master 01</span>
-              <h3>Before mastering</h3>
-            </div>
-            <div class="audio-pair">
-              <div class="audio-panel before">
-                <span class="audio-label">Before</span>
-                <h4>Unmastered mix</h4>
-                <button class="audio-button" data-audio="before-master-1.wav">
-                  <i data-lucide="play"></i>
-                  <span>Play before</span>
-                </button>
-              </div>
-              <div class="audio-panel after">
-                <span class="audio-label">After</span>
-                <h4>Mastered release</h4>
-                <button class="audio-button" data-audio="after-master-1.wav">
-                  <i data-lucide="play"></i>
-                  <span>Play after</span>
-                </button>
-              </div>
+            <div class="audio-panel">
+              <span class="audio-label">Mixing</span>
+              <h3>Rap Hook Energy</h3>
+              <button class="audio-button" data-audio="raw-vocal-2.wav">
+                <i data-lucide="play"></i>
+                <span>Raw</span>
+              </button>
+              <button class="audio-button" data-audio="pro-mix-2.wav">
+                <i data-lucide="play"></i>
+                <span>Mix</span>
+              </button>
             </div>
           </article>
 
           <article class="comparison-card">
-            <div class="comparison-meta">
-              <span>Mix + Master 02</span>
-              <h3>Final loudness pass</h3>
+            <div class="audio-panel">
+              <span class="audio-label">Mastering</span>
+              <h3>Before/After Master</h3>
+              <button class="audio-button" data-audio="before-master-1.wav">
+                <i data-lucide="play"></i>
+                <span>Unmastered</span>
+              </button>
+              <button class="audio-button" data-audio="after-master-1.wav">
+                <i data-lucide="play"></i>
+                <span>Mastered</span>
+              </button>
             </div>
-            <div class="audio-pair">
-              <div class="audio-panel before">
-                <span class="audio-label">Before</span>
-                <h4>Flat premaster</h4>
-                <button class="audio-button" data-audio="before-master-2.wav">
-                  <i data-lucide="play"></i>
-                  <span>Play before</span>
-                </button>
-              </div>
-              <div class="audio-panel after">
-                <span class="audio-label">After</span>
-                <h4>Finished master</h4>
-                <button class="audio-button" data-audio="after-master-2.wav">
-                  <i data-lucide="play"></i>
-                  <span>Play after</span>
-                </button>
-              </div>
+          </article>
+
+          <article class="comparison-card">
+            <div class="audio-panel">
+              <span class="audio-label">Mastering</span>
+              <h3>Loudness Pass</h3>
+              <button class="audio-button" data-audio="before-master-2.wav">
+                <i data-lucide="play"></i>
+                <span>Premaster</span>
+              </button>
+              <button class="audio-button" data-audio="after-master-2.wav">
+                <i data-lucide="play"></i>
+                <span>Final</span>
+              </button>
             </div>
           </article>
         </div>
@@ -247,16 +219,13 @@
           <h2 id="contact-title">Send the song. I’ll shape the finish.</h2>
         </div>
         <form class="contact-form">
-          <label>Name <input type="text" name="name" required /></label>
-          <label>Email <input type="email" name="email" required /></label>
-          <label>
-            Service
-            <select name="service">
-              <option>Mixing</option>
-              <option>Mastering</option>
-              <option>Production</option>
-            </select>
-          </label>
+          <input type="text" name="name" placeholder="Artist Name" required />
+          <input type="email" name="email" placeholder="Email Address" required />
+          <select name="service">
+            <option>Mixing</option>
+            <option>Mastering</option>
+            <option>Production</option>
+          </select>
           <button type="submit" class="primary-action">Send Request</button>
         </form>
       </section>
